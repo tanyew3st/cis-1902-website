@@ -7,7 +7,7 @@ import NotFoundPage from './pages/NotFoundPage';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/">
       <div className="flex h-screen bg-gray-50 justify-center">
         {/* Sidebar */}
         <div className="w-48 bg-gray-50 px-2 py-10 mr-4 mt-20">
