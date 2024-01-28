@@ -8,7 +8,7 @@ import NotFoundPage from './pages/NotFoundPage';
 const App = () => {
   return (
     <Router basename="/">
-      <div className="flex h-screen bg-gray-50 justify-center">
+      <div className="flex min-h-screen bg-gray-50 justify-center">
         {/* Sidebar */}
         <div className="w-48 bg-gray-50 px-2 py-10 mr-4 mt-20">
           <nav className="flex flex-col text-lg space-y-4">
@@ -20,7 +20,7 @@ const App = () => {
           </nav>
         </div>
         {/* Content Area */}
-        <main className="flex-1 p-10 mx-4 max-w-3xl">
+        <main className="flex-1 p-10 px-4 max-w-3xl">
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route path="/course" element={<CoursePage />} />
