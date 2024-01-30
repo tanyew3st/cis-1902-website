@@ -1,32 +1,34 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-// Assignment data
+// Assignment data with link type indicator
 const assignments = [
   {
     number: 0,
     title: "Python Setup Instructions",
     description: "Not an assignment, but a primer to help you set up your Python development environment.",
-    mainLink: "/setup",
-    links: [
-    ]
+    link: "/setup",
+    isInternalLink: true, // Link within the React app
   },
   {
     number: 1,
     title: "Python Basics",
     description: "Due Date: 09/07 - Explore the fundamentals of Python.",
-    mainLink: "/python-basics",
-    links: [
-    ]
+    link: `${process.env.PUBLIC_URL}/hw1.py`, // Link to a static file
+    isInternalLink: false, // Direct link to a file
   },
+  // Additional assignments...
 ];
 
 const AssignmentsPage = () => {
   const navigate = useNavigate();
 
-  const handleBlockClick = (e, url) => {
-    e.stopPropagation();
-    navigate(url);
+  const handleAssignmentClick = (assignment) => {
+    if (assignment.isInternalLink) {
+      navigate(assignment.link);
+    } else {
+      window.open(assignment.link, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
@@ -39,17 +41,10 @@ const AssignmentsPage = () => {
           <div 
             key={assignment.number} 
             className="p-4 border border-gray-200 rounded-md shadow-sm cursor-pointer"
-            onClick={(e) => handleBlockClick(e, assignment.mainLink)}
+            onClick={() => handleAssignmentClick(assignment)}
           >
             <h2 className="text-2xl font-semibold mb-2">Assignment {assignment.number}: {assignment.title}</h2>
             <p className="mb-4">{assignment.description}</p>
-            <div onClick={(e) => e.stopPropagation()}>
-              {assignment.links.map((link, index) => (
-                <Link key={index} to={link.url} className="text-indigo-600 hover:text-indigo-500 mr-4">
-                  {link.title}
-                </Link>
-              ))}
-            </div>
           </div>
         ))}
       </div>
