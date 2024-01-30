@@ -67,7 +67,8 @@ This is a placeholder to indicate that the function is incomplete. When you
 write your code for each function, you will replace this exception with your 
 implementation.
 
-You should be able to do this exclusively using what we have discussed thus far. 
+You should be able to do this exclusively using what we have discussed thus far.
+We definately recommend using dictionaries to represent the trie.
 
 Your primary goal is to complete the assignment correctly, focusing on a 
 thorough understanding of trie operations and structure. While maintaining 
