@@ -67,6 +67,8 @@ This is a placeholder to indicate that the function is incomplete. When you
 write your code for each function, you will replace this exception with your 
 implementation.
 
+You should be able to do this exclusively using what we have discussed thus far. 
+
 Your primary goal is to complete the assignment correctly, focusing on a 
 thorough understanding of trie operations and structure. While maintaining 
 clean and optimized code is encouraged, it is not the main emphasis. 
@@ -87,7 +89,7 @@ def insert(trie, word):
     Add a word to the given trie.
 
     Args:
-        trie (dict): the dictionary representation of a trie
+        trie: the dictionary representation of a trie
         word (str): the word to be added
 
     Returns:
@@ -103,7 +105,7 @@ def search(trie, word):
     Check whether the given word is present within the trie.
 
     Args:
-        trie (dict): the trie to check against
+        trie: the trie to check against
         word (str): the word to check
 
     Returns:
@@ -116,7 +118,7 @@ def startsWith(trie, prefix):
     Check whether there is a word in the trie that starts with the given prefix.
 
     Args:
-        trie (dict): the trie to check against
+        trie: the trie to check against
         prefix (str): the prefix to check
 
     Returns:
@@ -133,7 +135,7 @@ def create_trie(word_list):
         word_list (list): list of words (str)
 
     Returns:
-        dict: a dictionary representation of the trie
+        your Trie representation
     """
     raise NotImplementedError
 
@@ -144,7 +146,7 @@ def list_matches(trie, prefix):
     If no words in the trie match the given prefix, return an empty list.
 
     Args:
-        trie (dict): the trie to search over
+        trie: the trie to search over
         prefix (str): the prefix to match against
 
     Returns:
@@ -157,7 +159,7 @@ def countWord(trie, word):
     Count the number of times a word appears in the trie.
 
     Args:
-        trie (dict): the trie to search over
+        trie: the trie to search over
         word (str): the word to count
 
     Returns:
@@ -171,7 +173,7 @@ def countPrefix(trie, prefix):
     Count the number of times a prefix appears in the trie.
 
     Args:
-        trie (dict): the trie to search over
+        trie: the trie to search over
         prefix (str): the prefix to count
 
     Returns:
@@ -184,7 +186,7 @@ def remove(trie, word):
     Remove one occurence of a word from the trie.
 
     Args:
-        trie (dict): the trie to search over
+        trie: the trie to search over
         word (str): the word to remove one occurence of
 
     Returns:
