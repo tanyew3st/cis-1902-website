@@ -2,36 +2,109 @@
 HW 1: Tries
 
 Name:
-
 PennKey:
-
 Number of hours spent on homework:
+Favorite thing about the homework (optinoal but super helpful):
+Least favorite thing about the homework (optional but super helpful):
 
 Collaboration is NOT permitted.
 
-In all functions below, the "NotImplementedError" exception is raised, for
-you to fill in. The interpreter will not consider the empty code blocks
-as syntax errors, but the "NotImplementedError" will be raised if you
-call the function. You will replace these raised exceptions with your
-code completing the function as described in the docstrings.
+This homework involves implementing a trie, a tree-like data structure that 
+stores a set of strings. Tries allow for efficient searching of a string 
+within a set and have applications in spell checking and autocomplete.
 
-A trie is a tree-like data structure that stores a set of strings so that we can efficiently search for a given string in the set. 
-Tries have various applications, including spell checking and autocomplete. 
+You might wonder why use a Trie instead of a hash table or a balanced binary 
+search tree. While hash tables offer O(1) expected time complexity for 
+searching and balanced binary search trees offer O(log n), they aren't 
+efficient for prefix-based searches. Tries excel in searching strings with a 
+given prefix and listing all such strings in lexicographic order. Moreover, 
+tries are more space-efficient compared to hash tables, which face collision 
+issues as they grow, and binary search trees, which have significant 
+overhead due to pointers and rebalancing.
 
-You may be wondering, why would we ever need to use a Trie? Why not use a balanced binary search tree or a hash table? In fact, hash tables have O(1) expected time complexity for search, and balanced binary search trees have O(log n) time complexity for search. 
-The reason is while these data structures have good time complexity for search, they are not efficient for searching for strings with a given prefix and enumerating all strings with a given prefix in lexicographic order.
-Another reason is that tries are more space efficient than hash tables and balanced binary search trees, as when hash tables increase in size, collisions become more likely raising the time complexity of search, and balanced binary search trees have a lot of overhead for storing pointers to child nodes, and rebalancing the tree when necessary.
+Formally, with an alphabet A (a set of valid characters) and a set of strings 
+S (where no string is a prefix of another), a trie is an ordered tree. Each 
+node (except the root) is labeled with a character from A, and the tree has 
+|S| leaves, one for each string. The trie is structured so that the 
+concatenation of characters from the root to a leaf forms a string in S.
 
-More formally, given an alphabet A (set of valid characters, such as the English alphabet, or {A,C,D,G} for DNA)
-a set of strings, S such that no string is the prefix of another, a trie is an ordered tree whose nodes (except the root node) are labeled with characters from A. The tree has |S| leaves, one for every string. 
-The tree is constructed such that the concatenation of characters from root to leaf forms a string in S.
+For example:
+Given A as the English alphabet and S={bet, bid, bit, set, step}:
 
-Here is an example:
-Given A as the English alphabet and S={bet, bid, bit, set, step}, the corresponding trie is:
+First, suppose we insert bet & bid into the trie. The trie would look like this:
 
-In this homework, you will implement a trie and some functions that operate on it, with one twist. The same word can be inserted into the trie multiple times, so you will have to keep track of the number of times a word is inserted into the trie.
+-- Tree Structure -- 
+Root
+ ├── b
+ │    ├── e
+ │    │    └── t
+ │    └── i
+ │         └── d
 
+-- Dictionary Representation (feel free to implement it differently) --
+trie = {
+    'b': {
+        'e': {'t': {'_end': 1}},  # Count for 'bet'
+        'i': {'d': {'_end': 1}}   # Count for 'bid'
+    }
+}
+
+After all of the words are inserted, the trie would look like this:
+
+-- Tree Structure --
+Root
+ ├── b
+ │    ├── e
+ │    │    └── t
+ │    └── i
+ │         ├── d
+ │         └── t
+ └── s
+      ├── e
+      │    └── t
+      └── t
+           ├── e
+           └── p
+
+-- Dictionary Representation --
+trie = {
+    'b': {
+        'e': {'t': {'_end': 1}},  # Count for 'bet'
+        'i': {
+            'd': {'_end': 1},    # Count for 'bid'
+            't': {'_end': 1}     # Count for 'bit'
+        }
+    },
+    's': {
+        'e': {'t': {'_end': 1}},  # Count for 'set'
+        't': {
+            'e': {'p': {'_end': 1}}  # Count for 'step'
+        }
+    }
+}
+
+In this homework, you will implement a trie and its operations. Unique to 
+this implementation, you must account for multiple insertions of the same 
+word. This requires tracking the count of each word in the trie.
+
+In the functions below, the 'NotImplementedError' exception is initially raised. 
+This is a placeholder to indicate that the function is incomplete. When you 
+write your code for each function, you will replace this exception with your 
+implementation.
+
+Your primary goal is to complete the assignment correctly, focusing on a 
+thorough understanding of trie operations and structure. While maintaining 
+clean and optimized code is encouraged, it is not the main emphasis. 
+Completing the tasks accurately and understanding the concepts take precedence. 
+Remember, while well-optimized code is a great skill, the primary objective 
+here is to learn and correctly implement the trie data structure. Assume that 
+all the inputs are valid - so everything is some form of string, even if empty.
+Definately think about how you want to handle different cases in the code. As always,
+come to office hours or post on Ed if you need help!
+
+Good luck!
 """
+
 
 
 def insert(trie, word):
@@ -72,7 +145,7 @@ def startsWith(trie, prefix):
         prefix (str): the prefix to check
 
     Returns:
-        bool: True if there is a word in the trie that starts with the given prefix, False if it is not
+        bool: True if there is a word in the trie that starts with the given prefix, False if it is not.
     """
     raise NotImplementedError
 
@@ -192,7 +265,7 @@ def main():
 
     # ensure that the trie does not contain apple
     print(search(test_trie, 'apple') == False)
-    
+
     # ensure that the trie does not contain app
     print(startsWith(test_trie, 'app') == False)
 
