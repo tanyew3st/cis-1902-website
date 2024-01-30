@@ -41,14 +41,6 @@ Root
  │    └── i
  │         └── d
 
--- Dictionary Representation (feel free to implement it differently) --
-trie = {
-    'b': {
-        'e': {'t': {'_end': 1}},  # Count for 'bet'
-        'i': {'d': {'_end': 1}}   # Count for 'bid'
-    }
-}
-
 After all of the words are inserted, the trie would look like this:
 
 -- Tree Structure --
@@ -65,23 +57,6 @@ Root
       └── t
            ├── e
            └── p
-
--- Dictionary Representation --
-trie = {
-    'b': {
-        'e': {'t': {'_end': 1}},  # Count for 'bet'
-        'i': {
-            'd': {'_end': 1},    # Count for 'bid'
-            't': {'_end': 1}     # Count for 'bit'
-        }
-    },
-    's': {
-        'e': {'t': {'_end': 1}},  # Count for 'set'
-        't': {
-            'e': {'p': {'_end': 1}}  # Count for 'step'
-        }
-    }
-}
 
 In this homework, you will implement a trie and its operations. Unique to 
 this implementation, you must account for multiple insertions of the same 
