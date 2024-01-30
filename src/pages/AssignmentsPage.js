@@ -36,7 +36,6 @@ const AssignmentsPage = () => {
       <h1 className="text-4xl font-bold text-center mb-8">Assignments</h1>
       <div className="space-y-6">
         <p className="text-lg mb-6">Here you'll find a list of assignments for the course along with due dates and submission guidelines.</p>
-        
         {assignments.map((assignment) => (
           <div 
             key={assignment.number} 
