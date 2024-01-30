@@ -21,7 +21,7 @@ const CoursePage = () => {
               <td className="border border-gray-200 px-3 py-2">09/07</td>
               <td className="border border-gray-200 px-3 py-2">Intro to Python</td>
               <td className="border border-gray-200 px-3 py-2">
-                <a href="#" className="text-indigo-600 hover:text-indigo-500">HW1</a>
+                <a href="/assignments" className="text-indigo-600 hover:text-indigo-500">HW1</a>
               </td>
             </tr>
             {/* Additional rows as needed */}
