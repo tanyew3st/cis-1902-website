@@ -7,9 +7,15 @@ const HomePage = () => {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">Staff</h2>
         <ul className="list-disc list-inside">
-          <li><strong>Instructor:</strong><a class="text-indigo-600" href="mailto:tanayc@seas.upenn.edu"> Tanay Chandak</a></li>
-          <li><strong>Teaching Assistant:</strong><a class="text-indigo-600" href="mailto:jkakadia@seas.upenn.edu"> Jash Kakadia</a></li>
-          <li><strong>Teaching Assistant:</strong><a class="text-indigo-600" href="mailto:visheshp@seas.upenn.edu"> Vishesh Patel</a></li>
+            <div><strong>Instructor:</strong><a className="text-indigo-600" href="mailto:tanayc@seas.upenn.edu"> Tanay Chandak</a></div>
+            <div>
+              <strong>Teaching Assistant:</strong><a className="text-indigo-600" href="mailto:jkakadia@seas.upenn.edu"> Jash Kakadia</a>
+              <p className='ml-5'>Office Hours: 5:30-6:30PM at Levine 5th floor bump space</p>
+            </div>
+            <div>
+              <strong>Teaching Assistant:</strong><a className="text-indigo-600" href="mailto:visheshp@seas.upenn.edu"> Vishesh Patel</a>
+              <p className='ml-5'>Office Hours: Saturday 11-1 PM</p>
+            </div>
         </ul>
       </section>
       {/* Python Introduction */}
