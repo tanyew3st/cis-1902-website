@@ -10,11 +10,11 @@ const HomePage = () => {
             <div><strong>Instructor:</strong><a className="text-indigo-600" href="mailto:tanayc@seas.upenn.edu"> Tanay Chandak</a></div>
             <div>
               <strong>Teaching Assistant:</strong><a className="text-indigo-600" href="mailto:jkakadia@seas.upenn.edu"> Jash Kakadia</a>
-              <p className='ml-5'>Office Hours: 5:30-6:30PM at Levine 5th floor bump space</p>
+              <p className='ml-5'>Office Hours: W 5:30-6:30PM at Levine 5th floor bump space</p>
             </div>
             <div>
               <strong>Teaching Assistant:</strong><a className="text-indigo-600" href="mailto:visheshp@seas.upenn.edu"> Vishesh Patel</a>
-              <p className='ml-5'>Office Hours: Saturday 11-1 PM</p>
+              <p className='ml-5'>Office Hours: S 11-1 PM on Zoom</p>
             </div>
         </ul>
       </section>
