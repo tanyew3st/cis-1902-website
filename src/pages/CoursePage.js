@@ -1,6 +1,47 @@
 import React from 'react';
 
 const CoursePage = () => {
+  const lectures = [
+    {
+      lecNum: 1,
+      date: "09/07",
+      notes: [
+        { label: "Introduction Slides", filename: "lectures/lecture_1.pptx" },
+        { label: "Basics of Python", filename: "lectures/lecture_1.pptx" }
+      ],
+      homework: null
+    },
+    {
+      lecNum: 2,
+      date: "09/14",
+      notes: [
+        { label: "Week 2 Slides", filanem: "lectures/lecture_2.pptx" },
+        { label: "Data Structures", filename: "lectures/week_2.ipynb" }
+      ],
+      homework: { label: "Homework 1", filename: "homeworks/hw1.py" }
+    },
+    // Add more lectures as needed
+  ];
+
+  const downloadFile = (filename) => {
+    const link = document.createElement('a');
+    link.href = `${process.env.PUBLIC_URL}/${filename}`;
+    link.download = filename.split('/').pop(); // Set the download filename
+    document.body.appendChild(link); // Required for Firefox
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const renderLink = (item) => {
+    if (item.url) {
+      // External link
+      return <a href={item.url} className="text-indigo-600 hover:text-indigo-500" target="_blank" rel="noopener noreferrer">{item.label}</a>;
+    } else {
+      // Local file link for download
+      return <span onClick={() => downloadFile(item.filename)} className="text-indigo-600 hover:text-indigo-500 cursor-pointer">{item.label}</span>;
+    }
+  };
+
   return (
     <div className="container mx-auto p-4 max-w-6xl">
       <h1 className="text-3xl font-bold text-center mb-6">Course Schedule</h1>
@@ -15,16 +56,22 @@ const CoursePage = () => {
             </tr>
           </thead>
           <tbody>
-            {/* Sample Row */}
-            <tr>
-              <td className="border border-gray-200 px-3 py-2">1</td>
-              <td className="border border-gray-200 px-3 py-2">09/07</td>
-              <td className="border border-gray-200 px-3 py-2">Intro to Python</td>
-              <td className="border border-gray-200 px-3 py-2">
-                <a href="/assignments" className="text-indigo-600 hover:text-indigo-500">HW1</a>
-              </td>
-            </tr>
-            {/* Additional rows as needed */}
+            {lectures.map((lecture) => (
+              <tr key={lecture.lecNum}>
+                <td className="border border-gray-200 px-3 py-2">{lecture.lecNum}</td>
+                <td className="border border-gray-200 px-3 py-2">{lecture.date}</td>
+                <td className="border border-gray-200 px-3 py-2">
+                  {lecture.notes.map((note, index) => (
+                    <div key={index}>
+                      {renderLink(note)}
+                    </div>
+                  ))}
+                </td>
+                <td className="border border-gray-200 px-3 py-2">
+                  {lecture.homework ? renderLink(lecture.homework) : null}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

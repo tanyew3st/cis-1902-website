@@ -14,7 +14,7 @@ const assignments = [
     number: 1,
     title: "Python Basics",
     description: "Due Date: 09/07 - Explore the fundamentals of Python.",
-    link: `${process.env.PUBLIC_URL}/hw1.py`, // Link to a static file
+    link: `${process.env.PUBLIC_URL}/homeworks/hw1.py`, // Link to a static file
     isInternalLink: false, // Direct link to a file
   },
   // Additional assignments...
