@@ -23,7 +23,7 @@ issues as they grow, and binary search trees, which have significant
 overhead due to pointers and rebalancing.
 
 Formally, with an alphabet A (a set of valid characters) and a set of strings 
-S (where no string is a prefix of another), a trie is an ordered tree. Each 
+S, a trie is an ordered tree. Each 
 node (except the root) is labeled with a character from A, and the tree has 
 |S| leaves, one for each string. The trie is structured so that the 
 concatenation of characters from the root to a leaf forms a string in S.
