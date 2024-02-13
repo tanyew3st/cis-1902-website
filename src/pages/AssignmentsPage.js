@@ -13,10 +13,17 @@ const assignments = [
   {
     number: 1,
     title: "Python Basics",
-    description: "Due Date: 09/07 - Explore the fundamentals of Python.",
+    description: "Due Date: 02/13 - Explore the fundamentals of Python.",
     link: `${process.env.PUBLIC_URL}/homeworks/hw1.py`, // Link to a static file
     isInternalLink: false, // Direct link to a file
   },
+  {
+    number: 2,
+    title: "Advanced and Functional Python",
+    description: "Due Date: 02/20 - Dive deeper into Python and learn about functional programming.",
+    link: `${process.env.PUBLIC_URL}/homeworks/hw2.zip`,
+    isInternalLink: false,
+  }
   // Additional assignments...
 ];
 

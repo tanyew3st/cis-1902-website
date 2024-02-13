@@ -4,7 +4,7 @@ const CoursePage = () => {
   const lectures = [
     {
       lecNum: 1,
-      date: "09/07",
+      date: "01/24",
       notes: [
         { label: "Introduction Slides", filename: "lectures/lecture_1.pptx" },
         { label: "Basics of Python", filename: "lectures/week_1.ipynb" }
@@ -13,12 +13,19 @@ const CoursePage = () => {
     },
     {
       lecNum: 2,
-      date: "09/14",
+      date: "01/31",
       notes: [
         { label: "Week 2 Slides", filename: "lectures/lecture_2.pptx" },
         { label: "Data Structures", filename: "lectures/week_2.ipynb" }
       ],
       homework: { label: "Homework 1", filename: "homeworks/hw1.py" }
+    },
+    {
+      lecNum: 3,
+      date: "02/07",
+      notes: [
+        { label: "Functions and Classes", filename: "lectures/week_3.ipynb" }
+      ]
     },
     // Add more lectures as needed
   ];
