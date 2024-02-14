@@ -28,13 +28,13 @@ const CoursePage = () => {
       ]
     },
     {
-      lecNum: 4, 
+      lecNum: 4,
       date: "02/14",
       notes: [
         { label: "File I/O, Exceptions, Advanced Python", filename: "lectures/week_4.ipynb" }
       ],
+      homework: { label: "Homework 2", filename: "homeworks/hw2.zip" }
     }
-    // Add more lectures as needed
   ];
 
   const downloadFile = (filename) => {
