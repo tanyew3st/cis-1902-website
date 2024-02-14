@@ -27,6 +27,13 @@ const CoursePage = () => {
         { label: "Functions and Classes", filename: "lectures/week_3.ipynb" }
       ]
     },
+    {
+      lecNum: 4, 
+      date: "02/14",
+      notes: [
+        { label: "File I/O, Exceptions, Advanced Python", filename: "lectures/week_4.ipynb" }
+      ],
+    }
     // Add more lectures as needed
   ];
 
