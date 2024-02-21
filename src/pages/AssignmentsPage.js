@@ -30,13 +30,6 @@ const assignments = [
     description: "Due Date: 02/27 - Deeper dive into modules, testing, typing, memory(ish).",
     link: `${process.env.PUBLIC_URL}/homeworks/hw3.zip`,
     isInternalLink: false,
-  },
-  {
-    number: 4,
-    title: "Final Project",
-    description: "Due Date: 03/06 - Create a final project using Python.",
-    link: "/final-project",
-    isInternalLink: true,
   }
   // Additional assignments...
 ];
