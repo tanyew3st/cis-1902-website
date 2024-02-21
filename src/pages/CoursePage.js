@@ -40,7 +40,7 @@ const CoursePage = () => {
       date: "02/20",
       notes: [
         { label: "Memory, Typing, Testing, Environments", filename: "lectures/week_5.zip" },
-      ]
+      ],
       homework: { label: "Homework 3", filename: "homeworks/hw3.zip" }
     }
   ];
