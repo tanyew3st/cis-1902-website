@@ -23,6 +23,20 @@ const assignments = [
     description: "Due Date: 02/20 - Dive deeper into Python and learn about functional programming.",
     link: `${process.env.PUBLIC_URL}/homeworks/hw2.zip`,
     isInternalLink: false,
+  }, 
+  {
+    number: 3,
+    title: "Larger-Scale Python",
+    description: "Due Date: 02/27 - Deeper dive into modules, testing, typing, memory(ish).",
+    link: `${process.env.PUBLIC_URL}/homeworks/hw3.zip`,
+    isInternalLink: false,
+  },
+  {
+    number: 4,
+    title: "Final Project",
+    description: "Due Date: 03/06 - Create a final project using Python.",
+    link: "/final-project",
+    isInternalLink: true,
   }
   // Additional assignments...
 ];
