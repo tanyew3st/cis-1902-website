@@ -4,7 +4,7 @@ const CoursePage = () => {
   const lectures = [
     {
       lecNum: 1,
-      date: "01/24",
+      date: "01/23",
       notes: [
         { label: "Introduction Slides", filename: "lectures/lecture_1.pptx" },
         { label: "Basics of Python", filename: "lectures/week_1.ipynb" }
@@ -13,7 +13,7 @@ const CoursePage = () => {
     },
     {
       lecNum: 2,
-      date: "01/31",
+      date: "01/30",
       notes: [
         { label: "Week 2 Slides", filename: "lectures/lecture_2.pptx" },
         { label: "Data Structures", filename: "lectures/week_2.ipynb" }
@@ -22,18 +22,26 @@ const CoursePage = () => {
     },
     {
       lecNum: 3,
-      date: "02/07",
+      date: "02/06",
       notes: [
         { label: "Functions and Classes", filename: "lectures/week_3.ipynb" }
       ]
     },
     {
       lecNum: 4,
-      date: "02/14",
+      date: "02/13",
       notes: [
         { label: "File I/O, Exceptions, Advanced Python", filename: "lectures/week_4.ipynb" }
       ],
       homework: { label: "Homework 2", filename: "homeworks/hw2.zip" }
+    }, 
+    {
+      lecNum: 5, 
+      date: "02/20",
+      notes: [
+        { label: "Memory, Typing, Testing, Environments", filename: "lectures/week_5.zip" },
+      ]
+      homework: { label: "Homework 3", filename: "homeworks/hw3.zip" }
     }
   ];
 
