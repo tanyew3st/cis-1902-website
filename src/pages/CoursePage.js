@@ -52,7 +52,7 @@ const CoursePage = () => {
     {
       lecNum: 6,
       date: "02/27",
-      notes: [{ label: "Data Science", filename: "lectures/week_6.zip" }],
+      notes: [{ label: "Data Science", filename: "lectures/week_6.ipynb" }],
       homework: { label: "Homework 4", filename: "homeworks/hw4.zip" },
     },
   ];
