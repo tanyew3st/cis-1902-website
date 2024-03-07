@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/cis-1902-website/static/css/main.f6b494f9.css",
-    "main.js": "/cis-1902-website/static/js/main.faf2a37b.js",
+    "main.js": "/cis-1902-website/static/js/main.89514579.js",
     "static/js/787.4a5d958a.chunk.js": "/cis-1902-website/static/js/787.4a5d958a.chunk.js",
     "index.html": "/cis-1902-website/index.html",
     "main.f6b494f9.css.map": "/cis-1902-website/static/css/main.f6b494f9.css.map",
-    "main.faf2a37b.js.map": "/cis-1902-website/static/js/main.faf2a37b.js.map",
+    "main.89514579.js.map": "/cis-1902-website/static/js/main.89514579.js.map",
     "787.4a5d958a.chunk.js.map": "/cis-1902-website/static/js/787.4a5d958a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6b494f9.css",
-    "static/js/main.faf2a37b.js"
+    "static/js/main.89514579.js"
   ]
 }
