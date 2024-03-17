@@ -55,6 +55,24 @@ const CoursePage = () => {
       notes: [{ label: "Data Science", filename: "lectures/week_6.ipynb" }],
       homework: { label: "Homework 4", filename: "homeworks/hw4.zip" },
     },
+    {
+      lecNum: 7,
+      date: "03/12",
+      notes: [
+        {
+          label: "MatPlotLib",
+          filename: "lectures/week_7_1.ipynb",
+        },
+        {
+          label: "Sci-Kit Learn",
+          filename: "lectures/week_7_2.ipynb",
+        },
+        {
+          label: "Slides",
+          filename: "lectures/week_7.pdf",
+        },
+      ],
+    },
   ];
 
   const downloadFile = (filename) => {
