@@ -73,6 +73,35 @@ const CoursePage = () => {
         },
       ],
     },
+    {
+      lecNum: 8,
+      date: "03/19",
+      notes: [
+        {
+          label: "Code",
+          filename: "lectures/week_8_1.ipynb",
+        },
+        {
+          label: "Slides",
+          filename: "lectures/week_8_2.pdf",
+        },
+      ],
+      homework: { label: "Homework 5", filename: "homeworks/hw5.zip" },
+    },
+    {
+      lecNum: 9,
+      date: "03/26",
+      notes: [
+        {
+          label: "Final Project",
+          filename: "lectures/week_9.ipynb",
+        },
+        {
+          label: "Slides",
+          filename: "lectures/week_9.pdf",
+        },
+      ],
+    },
   ];
 
   const downloadFile = (filename) => {

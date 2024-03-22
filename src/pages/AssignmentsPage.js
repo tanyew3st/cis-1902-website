@@ -41,6 +41,14 @@ const assignments = [
     link: `${process.env.PUBLIC_URL}/homeworks/hw4.zip`,
     isInternalLink: false,
   },
+  {
+    number: 5,
+    title: "Deep Learning",
+    description:
+      "Due Date: 04/02 - Using Deep Learning for Digit Classification",
+    link: `${process.env.PUBLIC_URL}/homeworks/hw5.zip`,
+    isInternalLink: false,
+  },
   // Additional assignments...
 ];
 
