@@ -63,6 +63,13 @@ const assignments = [
     link: `${process.env.PUBLIC_URL}/homeworks/final_project.md`,
     isInternalLink: false,
   },
+  {
+    number: 8,
+    title: "Final Project",
+    description: "Due Date: 04/30 - Final project details.",
+    link: `${process.env.PUBLIC_URL}/homeworks/final_project.md`,
+    isInternalLink: false,
+  },
   // Additional assignments...
 ];
 
