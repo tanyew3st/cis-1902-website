@@ -49,6 +49,20 @@ const assignments = [
     link: `${process.env.PUBLIC_URL}/homeworks/hw5.zip`,
     isInternalLink: false,
   },
+  {
+    number: 6,
+    title: "Requests & Flask (& LLMs)",
+    description: "Due Date: 04/16 - Using APIs and building a simple web app.",
+    link: `${process.env.PUBLIC_URL}/homeworks/hw6.zip`,
+    isInternalLink: false,
+  },
+  {
+    number: 7,
+    title: "Final Project Milestone 1",
+    description: "Due Date: 04/16 - Final project details.",
+    link: `${process.env.PUBLIC_URL}/homeworks/final_project.md`,
+    isInternalLink: false,
+  },
   // Additional assignments...
 ];
 

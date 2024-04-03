@@ -78,11 +78,11 @@ const CoursePage = () => {
       date: "03/19",
       notes: [
         {
-          label: "Code",
+          label: "Deep Learning Code",
           filename: "lectures/week_8_1.ipynb",
         },
         {
-          label: "Slides",
+          label: "Deep Learning Slides",
           filename: "lectures/week_8_2.pdf",
         },
       ],
@@ -93,12 +93,26 @@ const CoursePage = () => {
       date: "03/26",
       notes: [
         {
-          label: "Final Project",
+          label: "Arun Slides (Coming Soon)",
           filename: "lectures/week_9.ipynb",
         },
         {
-          label: "Slides",
+          label: "Arun IPYNB (Coming Soon)",
           filename: "lectures/week_9.pdf",
+        },
+      ],
+    },
+    {
+      lecNum: 10,
+      date: "04/02",
+      notes: [
+        {
+          label: "Requests Slides",
+          filename: "lectures/week_10_1.pdf",
+        },
+        {
+          label: "Requests Code",
+          filename: "lectures/week_10_2.ipynb",
         },
       ],
     },
