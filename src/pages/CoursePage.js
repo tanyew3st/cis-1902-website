@@ -116,6 +116,24 @@ const CoursePage = () => {
         },
       ],
     },
+    {
+      lecNum: 11,
+      date: "04/09",
+      notes: [
+        {
+          label: "Flask Slides",
+          filename: "lectures/week_11_1.pdf",
+        },
+        {
+          label: "Flask Application Code",
+          filename: "lectures/week_11_2.zip",
+        },
+        {
+          label: "Flask Small Sample Code",
+          filename: "lectures/week_11_3.py",
+        },
+      ],
+    },
   ];
 
   const downloadFile = (filename) => {
